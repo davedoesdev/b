@@ -20,7 +20,7 @@ program.version(require('../package').version)
 	.option('-i, --implementations <files...>', 'modules to load into each benchmark', list)
 	.option('-k, --key <name>', 'global variable where benchmarks expect to find an implementation', 'implementation')
 	.option('--reporters', 'list the available reporters')
-	.option('--data <string>', 'arbitrary extra data (available in process.argv in benchmark)')
+	.option('--data <string>', 'arbitrary extra data (available in process.argv in benchmark)', '')
 
 program.on('--help', function () {
 	write('  Examples: \n')
