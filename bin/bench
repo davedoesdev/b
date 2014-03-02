@@ -20,6 +20,7 @@ program.version(require('../package').version)
 	.option('-i, --implementations <files...>', 'modules to load into each benchmark', list)
 	.option('-k, --key <name>', 'global variable where benchmarks expect to find an implementation', 'implementation')
 	.option('--reporters', 'list the available reporters')
+	.option('--data <string>', 'arbitrary extra data (available in process.argv in benchmark)')
 
 program.on('--help', function () {
 	write('  Examples: \n')
@@ -140,7 +141,7 @@ if (imps) {
 		batch.reporter(program.reporter)
 
 		shuffle(imps).forEach(function(file){
-			batch.addFile(file)
+			batch.addFile(file, null, '--data', program.data)
 		})
 
 		return batch.run(program.cycles[name] || program.cycles[''])
@@ -151,7 +152,7 @@ else {
 	var batch = new Batch(program.name)
 
 	files.forEach(function(path){
-		batch.addFile(path)
+		batch.addFile(path, null, '--data', program.data)
 	})
 
 	batch.reporter(program.reporter)
