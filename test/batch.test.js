@@ -24,10 +24,12 @@ describe('batch', function () {
   })
 
   it('should handle child process benchmarks', function (done) {
-    new Batch('test batch')
+    var batch = new Batch('test batch')
+    batch
       .add('sync', sync)
       .add('async', async)
       .do(3).then(function(results){
+        batch.close()
         results.should.be.a('array')
           .and.have.a.lengthOf(2)
           .and.have.property(0)

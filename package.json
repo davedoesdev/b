@@ -2,7 +2,10 @@
   "name": "b",
   "version": "3.0.0-preview",
   "description": "Benchmarks for Node.js.",
-  "keywords": ["benchmarks", "benchmarking"],
+  "keywords": [
+    "benchmarks",
+    "benchmarking"
+  ],
   "author": "Veselin Todorov <hi@vesln.com>",
   "repository": "http://github.com/vesln/b.git",
   "homepage": "http://github.com/vesln/b",
@@ -19,16 +22,19 @@
   "dependencies": {
     "foreach": "jkroso/forEach#0.8.10",
     "map": "jkroso/map#0.2.11",
-    "commander": "~2.2.0",
-    "cli-table": "~0.3.0",
-    "result": "~1.0.2",
-    "result-type": "*",
-    "idgen": "~2.0.2"
+    "commander": "^6.0.0",
+    "cli-table": "^0.3.1",
+    "result": "^1.0.3",
+    "result-type": "^1.0.0",
+    "idgen": "^2.1.0"
   },
   "devDependencies": {
-    "result-co": "*",
-    "mocha": "*",
-    "chai": "*"
+    "result-co": "^0.1.1",
+    "mocha": "^8.1.1",
+    "chai": "^4.2.0"
   },
-  "files": [ "lib", "bin"]
+  "files": [
+    "lib",
+    "bin"
+  ]
 }

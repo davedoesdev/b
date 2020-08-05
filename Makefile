@@ -12,6 +12,6 @@ node_modules: package.json
 	@npm install && touch $@
 
 examples: node_modules
-	@node --harmony examples/index.js
+	@node examples/index.js
 
 .PHONY: test examples
