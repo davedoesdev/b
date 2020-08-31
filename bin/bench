@@ -10,6 +10,7 @@ var resolve = path.resolve
 var join = path.join
 var fs = require('fs')
 
+program.storeOptionsAsProperties(true);
 
 program.version(require('../package').version)
   .usage('[options] [files]')
